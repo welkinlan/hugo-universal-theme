@@ -14,19 +14,19 @@
   translation: "地址"
 
 - id: contactTitle
-  translation: "联系"
+  translation: "联系我们"
 
 - id: contactForm
   translation: "联系表单"
 
 - id: contactName
-  translation: "你的名字"
+  translation: "您的名字"
 
 - id: contactMail
-  translation: "你的 Email"
+  translation: "您的Email"
 
 - id: contactMessage
-  translation: "你的信息"
+  translation: "您的信息"
 
 - id: contactSend
   translation: "发送信息"
@@ -56,7 +56,7 @@
   translation: "由"
 
 - id: recentPosts
-  translation: "最新博客"
+  translation: "最新动态"
 
 - id: aboutUs
   translation: "关于我们"
@@ -65,7 +65,7 @@
   translation: "更新"
 
 - id: older
-  translation: "更旧"
+  translation: "之前"
 
 - id: publishedOn
   translation: "在"

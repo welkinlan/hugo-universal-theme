@@ -1,0 +1,48 @@
+<div class="container" id="reports">
+    <!--Basic Table-->
+    <div class="panel panel-blue margin-bottom-20">
+        <div class="panel-heading">
+            <p class="panel-title" style="font-size: large">
+                <i class="fa fa-tasks"></i> 项目公示 </p>
+        </div>
+        <div class="panel-body">
+            <p style="font-size: medium">以下为
+                <strong>部分</strong>企业托管公开展示的验收结果, 统一验收监测单位为：天津蓝宇环境检测有限公司</p>
+            <p style="font-size: medium">公众请通过电话和信函的方式在截止日期前发表对该项目的意见和建议</p>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>项目名称</th>
+                    <th>建设单位</th>
+                    <th>建设地点</th>
+                    <th>公示日期</th>
+                    <th>报告下载</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range sort .Site.Data.reports "date" "desc"}}
+                <tr>
+                    <td>{{.name}}</td>
+                    <td>{{.company}}</td>
+                    <td>{{.location}}</td>
+                    <td>{{.date}}</td>
+                    <td>
+                        <button class="btn btn-success btn-xs" onclick="openReport({{ .name }});">
+                            <i class="fa fa-download"></i>
+                            下载
+                        </button>
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function openReport(name) {
+        var win = window.open("{{ .Site.BaseURL }}file/reports/" + name + ".pdf", "file");
+        win.focus();
+    }
+</script>
