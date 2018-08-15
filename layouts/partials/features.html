@@ -1,7 +1,7 @@
 {{ if isset .Site.Params "features" }} {{ if .Site.Params.features.enable }} {{ if gt (len .Site.Data.features) 0 }}
 <section>
 <div class="container content-sm">
-        {{ range $index, $element := sort .Site.Data.features "weight" }}
+        {{ range $index, $element := sort .Site.Data.features.items "weight" }}
             {{ if eq (mod $index 4) 0 }}
                 <div class="row">
             {{ end }}
@@ -16,7 +16,7 @@
                             </a>
                         </div>
                     </div>
-            {{ if or (eq (mod $index 4) 3) (eq $index (sub (len $.Site.Data.features) 1 )) }}
+            {{ if or (eq (mod $index 4) 3) (eq $index (sub (len $.Site.Data.features.items) 1 )) }}
                 </div>
             </div>
             {{ end }}

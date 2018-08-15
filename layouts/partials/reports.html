@@ -6,9 +6,10 @@
                 <i class="fa fa-tasks"></i> 项目公示 </p>
         </div>
         <div class="panel-body">
-            <p style="font-size: medium">以下为
-                <strong>部分</strong>企业托管公开展示的验收结果, 统一验收监测单位为：天津蓝宇环境检测有限公司</p>
-            <p style="font-size: medium">公众请通过电话和信函的方式在截止日期前发表对该项目的意见和建议</p>
+            <p style="font-size: medium">以下为&nbsp;
+                <strong>部分</strong>&nbsp;企业托管公开展示的验收结果, 统一验收监测单位为：天津蓝宇环境检测有限公司。</p>
+            <p style="font-size: medium">公示日期起&nbsp;
+                <strong>2周</strong>&nbsp;内公众可下载报告，并通过电话和信函的方式发表对该项目的意见和建议。</p>
         </div>
         <table class="table table-hover">
             <thead>
@@ -21,18 +22,22 @@
                 </tr>
             </thead>
             <tbody>
-                {{ range sort .Site.Data.reports "date" "desc"}}
+                {{ range .Site.Data.reports.items }}
                 <tr>
                     <td>{{.name}}</td>
                     <td>{{.company}}</td>
                     <td>{{.location}}</td>
                     <td>{{.date}}</td>
+                    {{ if true }}
                     <td>
                         <button class="btn btn-success btn-xs" onclick="openReport({{ .name }});">
                             <i class="fa fa-download"></i>
                             下载
                         </button>
                     </td>
+                    {{ else }}
+                    <td> 公示期满 </td>
+                    {{ end }}
                 </tr>
                 {{ end }}
             </tbody>

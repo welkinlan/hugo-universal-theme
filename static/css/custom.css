@@ -1,0 +1,27 @@
+.service a {
+  text-decoration: none;
+}
+
+section,
+div.section {
+  margin-bottom: 10px;
+}
+
+.bar {
+  padding: 40px 0;
+}
+
+.white-text {
+  color: white;
+}
+
+.bar.mybg {
+  background: url('../img/banners/na1.jpg') center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.qrcode {
+  width: 200px;
+  float: right;
+}
